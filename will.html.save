@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Willy Magusib | </title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Fira Code', monospace;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: #aaffaa;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .profile-pic-wrapper {
+      display: inline-block;
+      padding: 6px;
+      border-radius: 50%;
+      background: linear-gradient(270deg, violet, cyan, magenta, blue, violet);
+      background-size: 600% 600%;
+      animation: rgbflow 6s ease infinite;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .animated-name {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(270deg, violet, cyan, magenta, blue, violet);
+      background-size: 1000% 1000%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rgbflow 6s ease infinite;
+      text-shadow: 0 0 10px violet;
+    }
+
+    @keyframes rgbflow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .typing-text {
+      color: #ccc;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      height: 1.2em;
+      line-height: 1.2em;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #00ffcc;
+      animation: blink 0.75s infinite step-end;
+      display: inline-block;
+      padding-right: 5px;
+      min-width: 300px;
+      text-align: left;
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-icons a img {
+      width: 32px;
+      filter: invert(1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-radius: 12px;
+      background-color: #121212;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; bottom: -2px; right: -2px;
+      background: linear-gradient(270deg, #ff00cc, #00ffff, #6600ff, #ffcc00, #ff00cc);
+      background-size: 600% 600%;
+      z-index: -1;
+      border-radius: 12px;
+      animation: rgbflow 8s ease infinite;
+    }
+
+    h2 {
+      color: #66ffcc;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.3rem;
+    }
+
+    a {
+      color: #88ffcc;
+      text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    audio {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(to right, #00ffaa, #00ccff);
+      color: #000;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .button-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00ffaa, 0 0 20px #00ccff;
+    }
+  </style
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://soundcloud.com/slushiisociety/past-lives?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <div class="profile-pic-wrapper">
+      <img src="https://i.imgur.com/IepwgGt.jpeg" alt="Willy Profile Picture" class="profile-pic" />
+    </div>
+    <h1 class="animated-name">Willy Magusib</h1>
+    <div class="typing-text" id="typing"></div>
+    <div class="social-icons">
+      <a href=t" target="_blank" title="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.tiktok.com/@stainn53" target="_blank" title="TikTok">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+      </a>
+      <a href="https://www.youtube.com/@WillyMagusib" target="_blank" title="YouTube">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+      </a>
+    </div>
+  </header>
+
+  <section>
+    <h2>🧑‍💻 Currently studying </h2>
+    <p>ICT — Major Web Development</p>
+  </section>
+
+  <section>
+    <h2>🛠 Skills & Technologies</h2>
+    <ul>
+      <li>Chat Bot Development</li>
+      <li>FB Auto React and Share Maker</li>
+      <li>Pentesting</li>
+      <li>Pragramming</li>
+      <li>Termux , Phising, Android</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💻 Projects</h2>
+    <ul>
+      <li>
+        Simple HTML music love letter site —
+        <a href="https://willy-nine.vercel.app/" target="_blank" class="button-link">View Project</a>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📬 Contact</h2>
+    <ul>
+      <li>GitHub: <a href="https://github.com/willpoqigithub" target="_blank">Willy Magusib</a></li>
+    </ul>
+  </section>
+
+  <script>
+    const text = "👨‍💻 Web development | Cybersecurity";
+    let i = 0;
+    const speed = 60;
+    const backspaceSpeed = 30;
+    const pauseBeforeDelete = 1500;
+    const pauseBeforeType = 1000;
+    const typingEl = document.getElementById("typing");
+
+    function typeWriter() {
+      if (i < text.length) {
+        typingEl.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else {
+        setTimeout(eraseText, pauseBeforeDelete);
+      }
+    }/
+
+    function eraseText() {
+      if (i > 0) {
+        typingEl.innerHTML = text.substring(0, i - 1);
+        i--;
+        setTimeout(eraseText, backspaceSpeed);
+      } else {
+        setTimeout(typeWriter, pauseBeforeType);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
